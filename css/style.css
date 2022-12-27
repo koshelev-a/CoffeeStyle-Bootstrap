@@ -53,15 +53,15 @@ header {
 }
 
 #coffee-cup{
-    background-image: url(/img/coffeeCupPapper.jpeg);
+    background-image: url(../img/coffeeCupPapper.jpeg);
 }
 
 #coffee-bar {
-    background-image: url(/img/CoffeeBar.png);
+    background-image: url(../img/CoffeeBar.png);
 }
 
 #barista {
-    background-image: url(/img/Barista.png);
+    background-image: url(../img/Barista.png);
 }
 
 .size__box {
