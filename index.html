@@ -8,41 +8,50 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/sing-up.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script  src="./js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous" defer></script>
     <script src="./js/main.js" defer></script>
+    <script  src="./js/bootstrap.bundle.min.js" defer></script>
     <title>CoffeeStyle</title>
 </head>
 <body>
-    <header id="home">
-        <ul class="header_block_link">
-            <li class="header__link">
-                <nav class="navbar">
-                    <a class="navbar-brand" href="#">
-                      <img src="./img/ImgeCoffeeStyleLogo.png" height="24" alt="CoffeeStyle. Logo">
-                    </a>
-                </nav>
-            </li>
-            <li class="header__link"><a class="a_color" href="#home">Home</a></li>
-            <li class="header__link"><a class="a_color" href="#products">Our products</a></li>
-            <li class="header__link"><a class="a_color" href="#blog">Blog</a></li>
-            <li class="header__link"><a class="a_color" href="">About</a></li>
-            <li class="header__link"><a class="a_color" href="#contact">Contact</a></li>
-            <li class="header__link"><button class="sing_up_bttn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sing Up</button></li>
-            <li class="header__link">
-                <div class="bttn__card">
-                    <div class="icon__card"></div>
-                    <a class="a_color" href="">Cart</a>
-                    <div class="number_of_purchases">0</div>
-                </div>
-            </li>
-        </ul> 
+<section class="container">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light mr-auto">
+            <a class="navbar-brand" href="#"><img src="./img/ImgeCoffeeStyleLogo.png" height="24" alt="CoffeeStyle. Logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item header__link"><a class="nav-link a_color" href="#home">Home</a></li>
+                    <li class="nav-item header__link"><a class="nav-link a_color" href="#products">Our products</a></li>
+                    <li class="nav-item header__link"><a class="nav-link a_color" href="#blog">Blog</a></li>
+                    <li class="nav-item header__link"><a class="nav-link a_color" href="#">About</a></li>
+                    <li class="nav-item header__link"><a class="nav-link a_color" href="#contact">Contact</a></li>
+                    <li class="nav-item header__link"><button class="nav-link sing_up_bttn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sing Up</button></li>
+                    <li class="nav-item header__link">
+                        <div class="size-card">
+                            <div class="bttn__card">
+                                <div class="icon__card"></div>
+                                <a class="a_color" href="">Cart</a>
+                                <div class="number_of_purchases">0</div>
+                            </div>
+                        </div>
+                    </li>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
+    
+    <!-- Авторизация -->
     <section class="content">
-
         <div id="id01" class="modal">
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
             <form class="box_content" action="/action_page.php">
-              <div class="container">
+            <div class="container">
                 <div class="headline__singup text">Welcome</div>
                 <div class="singup__logo">
                     <img img src="./img/ImgeCoffeeStyleLogo.png" height="24" alt="CoffeeStyle. Logo">
@@ -55,14 +64,15 @@
                     <button class="bttn_ddddd" type="submit">Sign Up</button>
                     <button class="bttn_ddddd" type="button" onclick="document.getElementById('id01').style.display='none'">Cancel</button>
                 </div>
-              </div>
+            </div>
             </form>
-          </div>
-
-        <section class="home__page">
-            
-            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                <div class="carousel-inner">
+        </div>
+    </section>
+        
+    <!-- Слайдер Надо переделать-->
+    <section class="home__page">     
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
                 <div class="carousel-item active size__box">
                     <div id="coffee-cup" class="home_page_img d-block slide_img">
                         <div class="shadow__block">
@@ -73,6 +83,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="carousel-item size__box">
                     <div id="coffee-bar" class="home_page_img d-block slide_img">
                         <div class="shadow__block">
@@ -83,200 +94,195 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item size__box">
-                    <div id="barista" class="home_page_img d-block slide_img">
-                        <div class="shadow__block">
-                            <div class="first_tHome text">Best place to buy design</div>
-                            <div class="second_tHome text">Coffee Mugs</div>
-                            <div class="third_tHome text">The most versatile furniture system ever created. Designed to fit your life, made to move and grow.</div>
-                            <div class="bttn_home_page text"><span>Explore Our Products</span></div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"  data-bs-slide="prev">
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"  data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Предыдущий</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"  data-bs-slide="next">
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"  data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Следующий</span>
-                </button>
+            </button>
+        </div>
+    </section>
+
+    <!-- Первая информация -->
+    <section id="blog" class="info__page">
+        <div class="info__header text">Even the all-powerful Pointing has no control about the blind texts.</div>
+        <div class="paragraf text">It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</div>
+        <div class="read__story text">Read the full Story</div>
+    </section>
+
+    <!-- Популярные чашки -->
+    <section class="featured__mugs">
+        <div class="header_for_page">
+            <div class="line__left"></div>
+            <div class="header_page_text text">Featured Mugs</div>
+            <div class="line__right"></div>
+        </div>
+        
+        <div class="row favorit__mugs">
+            <div class="col-md-4 box_fav_mugs">
+                <div class="pink__mug"><img class="favorit__img" src="./img/PinkMugs.png"></div>
+                <div class="muginfo text">Pink Premium Ceramic</div>
+                 <span class="price text">$ 99.00 USD</span>
             </div>
-           
 
-        </section>
-
-        <section id="blog" class="info__page">
-            <div class="info__header text">Even the all-powerful Pointing has no control about the blind texts.</div>
-            <div class="paragraf text">It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</div>
-            <div class="read__story text">Read the full Story</div>
-        </section>
-
-        <section class="featured__mugs">
-            <div class="header_for_page">
-                <div class="line__left"></div>
-                <div class="header_page_text text">Featured Mugs</div>
-                <div class="line__right"></div>
+            <div class="col-md-4 box_fav_mugs">
+                <div class="gold__mug"><img class="favorit__img" src="./img/GoldMugs.png"></div>
+                <div class="muginfo text">Golden Designers Mug</div>
+                <span class="price__discount text">$50.00<span class="crossedout">$ 69.00 USD</span></span>
             </div>
-            <div class="favorit__mugs">
-                <div class="box_fav_mugs">
-                    <div class="pink__mug"></div>
-                    <div class="muginfo text">Pink Premium Ceramic</div>
-                    <span class="price text">$ 99.00 USD</span>
-                </div>
+        </div>
+    </section>
 
-                <div class="box_fav_mugs">
-                    <div class="gold__mug"></div>
-                    <div class="muginfo text">Golden Designers Mug</div>
-                    <span class="price__discount text">$50.00<span class="crossedout">$ 69.00 USD</span></span>
-                </div>
+    <!-- Чашки -->
+    <section id="products" class="products__page">
+        <div class="header_for_page">
+            <div class="line__left"></div>
+            <div class="header_page_text text">More Products</div>
+            <div class="line__right"></div>
+        </div>
+
+        <div class="row more__products">
+            <div class="col-md-4 box__card">
+                <div class=""><img class="img__card" src="./img/RedLoveCup.png" alt=""></div>
+                <div class="muginfo text">Red Love Cup</div>
+                <span class="price__discount text">$25.00<span class="crossedout">$ 37.00 USD</span></span>
             </div>
-        </section>
 
-        <section id="products" class="products__page">
-            <div class="header_for_page">
-                <div class="line__left"></div>
-                <div class="header_page_text text">More Products</div>
-                <div class="line__right"></div>
+            <div class="col-md-4 box__card">
+                <div class=""><img class="img__card" src="./img/BlackTeaCup.png" alt=""></div>
+                <div class="muginfo text">Black Tea Cup</div>
+                <span class="price__discount text">$15.00<span class="crossedout">$ 29.00 USD</span></span>
             </div>
-            <div class="more__products">
 
-                <div class="box__card">
-                    <div class=""><img class="img__card" src="./img/RedLoveCup.png" alt=""></div>
-                    <div class="muginfo text">Red Love Cup</div>
-                    <span class="price__discount text">$25.00<span class="crossedout">$ 37.00 USD</span></span>
-                </div>
-
-                <div class="box__card">
-                    <div class=""><img class="img__card" src="./img/BlackTeaCup.png" alt=""></div>
-                    <div class="muginfo text">Black Tea Cup</div>
-                    <span class="price__discount text">$15.00<span class="crossedout">$ 29.00 USD</span></span>
-                </div>
-
-                <div class="box__card">
-                    <div class=""><img class="img__card" src="./img/B&WEssentialsMug.png" alt=""></div>
-                    <div class="muginfo text">B&W Essentials Mug</div>
-                    <span class="price__discount crossedout text">$ 19.00 USD</span>
-                </div>
+            <div class="col-md-4 box__card">
+                <div class=""><img class="img__card" src="./img/B&WEssentialsMug.png" alt=""></div>
+                <div class="muginfo text">B&W Essentials Mug</div>
+                <span class="price__discount crossedout text">$ 19.00 USD</span>
             </div>
-            <div class="more__products">
-                <div class="box__card">
-                    <div class=""><img class="img__card" src="./img/WinterStyleMug.png" alt=""></div>
-                    <div class="muginfo text">Winter Style Mug</div>
-                    <span class="price text">$ 25.00 USD</span>
-                </div>
 
-                <div class="box__card">
-                    <div class=""><img class="img__card" src="./img/CeramicTea.png" alt=""></div>
-                    <div class="muginfo text">Ceramic Tea</div>
-                    <span class="price text">$ 46.00 USD</span>
-                </div>
-            
-                <div class="box__card">
-                    <div class=""><img class="img__card" src="./img/NoHandleBarCup.png" alt=""></div>
-                    <div class="muginfo text">No Handle Bar Cup</div>
-                    <span class="price text">$ 34.00 USD</span>
-                </div>
-               
+            <div class="col-md-4 box__card">
+                <div class=""><img class="img__card" src="./img/WinterStyleMug.png" alt=""></div>
+                <div class="muginfo text">Winter Style Mug</div>
+                <span class="price text">$ 25.00 USD</span>
             </div>
-            <div class="more__products">
-                <div class="box__card">
-                    <div class=""><img class="img__card" src="./img/EspressoCup.png" alt=""></div>
-                    <div class="muginfo text">Espresso Cup by Mugs.co</div>
-                    <span class="price text">$ 25.00 USD</span>
-                </div>
-            
-                <div class="box__card">
-                    <div class=""><img class="img__card" src="./img/PinkPremiumCeramic.png" alt=""></div>
-                    <div class="muginfo text">Pink Premium Ceramic</div>
-                    <span class="price text">$ 99.00 USD</span>
-                </div>
-                <div class="box__card">
-                    <div class=""><img class="img__card" src="./img/SummerDesignerCup.png" alt=""></div>
-                    <div class="muginfo text">Summer Designer Cup</div>
-                    <span class="price text">$ 29.00 USD</span>
-                </div>
-            </div>
-        </section>
 
-        <section class="promotion__page">
-            <div class="header_for_page">
-                <div class="line__left"></div>
-                <div class="header_page_text text">Buy 2 mugs and get a coffee magazine free</div>
-                <div class="line__right"></div>
+            <div class="col-md-4 box__card">
+                <div class=""><img class="img__card" src="./img/CeramicTea.png" alt=""></div>
+                <div class="muginfo text">Ceramic Tea</div>
+                <span class="price text">$ 46.00 USD</span>
             </div>
-            <div class="promotion__box">
-                <div class="promotion_img_box">
-                    <div><img class="img_conf_max" src="./img/WhiteBook.png" alt=""></div>
-                    <div>
-                        <div class="img_box_little"><img class="img_conf_min" src="./img/Hands&Cup.png" alt=""></div>
-                        <div class="img_box_little" style="margin-top: 20px;"><img class="img_conf_min" src="./img/CoffeeCup.png" alt=""></div>
-                    </div>
-                </div>
-                <div class="promotion__text text">
-                    <div class="premium__offer">Premium Offer</div>
-                    <div class="get__our">Get our Coffee<br>Magazine</div>
-                    <div class="your__life">The most versatile furniture system ever<br>created. Designed to fit your life.</div>
-                    <div class="start__shopping">Start Shopping</div>
+        
+            <div class="col-md-4 box__card">
+                <div class=""><img class="img__card" src="./img/NoHandleBarCup.png" alt=""></div>
+                <div class="muginfo text">No Handle Bar Cup</div>
+                <span class="price text">$ 34.00 USD</span>
+            </div>
+
+            <div class="col-md-4 box__card">
+                <div class=""><img class="img__card" src="./img/EspressoCup.png" alt=""></div>
+                <div class="muginfo text">Espresso Cup by Mugs.co</div>
+                <span class="price text">$ 25.00 USD</span>
+            </div>
+        
+            <div class="col-md-4 box__card">
+                <div class=""><img class="img__card" src="./img/PinkPremiumCeramic.png" alt=""></div>
+                <div class="muginfo text">Pink Premium Ceramic</div>
+                <span class="price text">$ 99.00 USD</span>
+            </div>
+            <div class="col-md-4 box__card">
+                <div class=""><img class="img__card" src="./img/SummerDesignerCup.png" alt=""></div>
+                <div class="muginfo text">Summer Designer Cup</div>
+                <span class="price text">$ 29.00 USD</span>
+            </div>
+    </section>
+
+    <!-- А -->
+    <section class="promotion__page">
+        <div class="header_for_page">
+            <div class="line__left"></div>
+            <div class="header_page_text text">Buy 2 mugs and get a coffee magazine free</div>
+            <div class="line__right"></div>
+        </div>
+        <div class="row promotion__box">
+            <div class="col-lg-6 promotion_img_box">
+                <div class=""><img class="img_conf_max" src="./img/WhiteBook.png" alt=""></div>
+                <div class="">
+                    <div class="img_box_little"><img class="img_conf_min" src="./img/Hands&Cup.png" alt=""></div>
+                    <div class="img_box_little" style="margin-top: 20px;"><img class="img_conf_min" src="./img/CoffeeCup.png" alt=""></div>
                 </div>
             </div>
-        </section>
-
-        <section>
-            <div class="background__page"></div>
-        </section>
-
-        <section id="style_guide" class="stories__page">
-            <div class="header_for_page">
-                <div class="line__left"></div>
-                <div class="header_page_text text">Behind the mugs, lifestyle stories</div>
-                <div class="line__right"></div>
+            <div class="col-lg-5  promotion__text text">
+                <div class="premium__offer">Premium Offer</div>
+                <div class="get__our">Get our Coffee<br>Magazine</div>
+                <div class="your__life">The most versatile furniture system ever<br>created. Designed to fit your life.</div>
+                <div class="start__shopping">Start Shopping</div>
             </div>
-            <div class="contact_content_block">
-                <div class="stories__box text">
-                    <div class="stories_img_block"><img class="img__300" src="./img/CoffeeHouse.png" alt=""></div>
-                    <div class="stories__headline">Health Check: why do I get a headache when I haven’t had my coffee?</div>
-                    <div class="stories__subtitle">It is a paradisematic country, in which roasted parts of sentences fly into<br> your mouth.</div>
-                    <div class="stories__data">October 9, 2018</div>
-                </div>
+        </div>
+    </section>
 
-                <div class="stories__box text">
-                    <div class="stories_img_block"><img class="img__300" src="./img/CoffeeHouse2.png" alt=""></div>
-                    <div class="stories__headline">How long does a cup of coffee keep you awake?</div>
-                    <div class="stories__subtitle">It is a paradisematic country, in which roasted parts. Vel qui et ad voluptatem.</div>
-                    <div class="stories__data">October 9, 2018</div>
-                </div>
+    <!-- Просто фон -->
+    <section>
+        <div class="background__page"></div>
+    </section>
 
-                <div class="stories__box text">
-                    <div class="stories_img_block"><img class="img__300" src="./img/СoffeeСeremony.png" alt=""></div>
-                    <div class="stories__headline">Recent research suggests that heavy coffee drinkers may reap health benefits.</div>
-                    <div class="stories__subtitle">It is a paradisematic country, in which roasted parts of sentences fly into<br> your mouth.</div>
-                    <div class="stories__data">October 9, 2018</div>
-                </div>
+    <!-- Лайв-стайл -->
+    <section id="style_guide" class="stories__page">
+        <div class="header_for_page">
+            <div class="line__left"></div>
+            <div class="header_page_text text">Behind the mugs, lifestyle stories</div>
+            <div class="line__right"></div>
+        </div>
+        <div class="row contact_content_block">
+            <div class="col-md-3 stories__box text">
+                <div class="stories_img_block"><img class="img__300" src="./img/CoffeeHouse.png" alt=""></div>
+                <div class="stories__headline">Health Check: why do I get a headache when I haven’t had my coffee?</div>
+                <div class="stories__subtitle">It is a paradisematic country, in which roasted parts of sentences fly into<br> your mouth.</div>
+                <div class="stories__data">October 9, 2018</div>
             </div>
-        </section>
 
-        <section id="contact" class="contact__page">
-            <div class="contact_headline_page">
-                <div class="line__left contact__line"></div>
-                <div class="contact__headline text ">Sign up and get free coffee bags</div>
-                <div class="line__right contact__line"></div>
+            <div class="col-md-3 stories__box text">
+                <div class="stories_img_block"><img class="img__300" src="./img/CoffeeHouse2.png" alt=""></div>
+                <div class="stories__headline">How long does a cup of coffee keep you awake?</div>
+                <div class="stories__subtitle">It is a paradisematic country, in which roasted parts. Vel qui et ad voluptatem.</div>
+                <div class="stories__data">October 9, 2018</div>
             </div>
-            <div class="contact__subtitle text">Coffee Updates</div>
-            <div class="contact__connection">
-                <div class="social__network text">customer @coffestyle.io</div>
-                <div class="bttn_subscribe text">subscribe</div>
-            </div>
-        </section>
 
-        <section class="footer__page">
-            <div class="footer__brand">
+            <div class="col-md-3 stories__box text">
+                <div class="stories_img_block"><img class="img__300" src="./img/СoffeeСeremony.png" alt=""></div>
+                <div class="stories__headline">Recent research suggests that heavy coffee drinkers may reap health benefits.</div>
+                <div class="stories__subtitle">It is a paradisematic country, in which roasted parts of sentences fly into<br> your mouth.</div>
+                <div class="stories__data">October 9, 2018</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="contact__page">
+        <div class="contact_headline_page">
+            <div class="line__left contact__line"></div>
+            <div class="contact__headline text ">Sign up and get free coffee bags</div>
+            <div class="line__right contact__line"></div>
+        </div>
+        <div class="contact__subtitle text">Coffee Updates</div>
+        <div class="row contact__connection">
+            <div class="col-md-6 social__network text">customer @coffestyle.io</div>
+            <div class="col-md-2 bttn_subscribe text">subscribe</div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <section class="footer__page">
+        <div class="row">
+            <div class="col-md-3 footer__brand">
                 <div><img class="footer__logo" src="./img/ImgeCoffeeStyleLogo.png" alt=""></div>
                 <div class="footer__subtitle text">Delivering the best coffee life since 1996. From coffee geeks to the real ones.</div>
                 <div class="footer__law text">CoffeeStyle Inc. © 1996</div>
             </div>
-            <div class="footer_nav_block">
+            <div class="col-md-2 footer_nav_block">
                 <div class="footer__headline text">Menu</div>
                 <ul class="footer_nav_link text">
                     <li class="footer_nav_li"><a class="footer_a_link" href="#home">Home</a></li>
@@ -286,7 +292,7 @@
                     <li class="footer_nav_li"><a class="footer_a_link" href="#style_guide">Styleguide</a></li>
                 </ul>
             </div>
-            <div class="footer_nav_block">
+            <div class="col-md-2 footer_nav_block">
                 <div class="footer__headline text">Follow Us</div>
                 <ul class="footer_nav_link text">
                     <li class="footer_nav_li"><a class="footer_a_link" href="">Facebook</a></li>
@@ -295,13 +301,14 @@
                     <li class="footer_nav_li"><a class="footer_a_link" href="">Twitter</a></li>
                 </ul>
             </div>
-            <div class="footer__contact text">
+            <div class="col-md-2 footer__contact text">
                 <div class="footer__headline ">Contact Us</div>
                 <div class="footer__help">We’re Always Happy to Help</div>
                 <div class="footer__email">us@coffeestyle.io</div>
                 <div class="footer__webflow">Powered by Webflow</div>
             </div>
-        </section>
+        </div>
     </section>
+</section>    
 </body>
 </html>

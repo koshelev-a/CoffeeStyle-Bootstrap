@@ -14,6 +14,8 @@
 header {
     width: 100%;
     background-color: white;
+    display: flex;
+    justify-content: center;
 }
 
 .header_block_link {
@@ -61,7 +63,7 @@ header {
 }
 
 #barista {
-    background-image: url(../img/Barista.png);
+    background-image: url(../img/CoffeeBar.png);
 }
 
 .size__box {
@@ -114,12 +116,18 @@ header {
 
 .bttn__card {
     display: flex;
+    max-width: 100px;
     margin-left: 20px;
     padding-bottom: 4px;
     text-align: center;
     border-bottom: 2px solid rgba(162, 95, 75, 0.3);
 }
 
+@media screen and (max-width: 990px) {
+    .bttn__card {
+        display: none;
+    }
+}
 /*/////////////////////////////////////////
 /////////// Домашняя страницы ////////////
 ///////////////////////////////////////*/
@@ -128,11 +136,6 @@ header {
     background-color: #050827;
     width: 100%;
     z-index: -1;
-}
-
-.reddd {
-    position: relative;
-    height: 530px;
 }
 
 .first_tHome {
@@ -218,7 +221,7 @@ header {
 .header_for_page {
     display: flex;
     justify-content: center;
-    padding: 100px 0;
+    padding: 7% 0;
 }
 
 .line__left {
@@ -247,41 +250,32 @@ header {
 }
 
 /*/////////////////////////////////////////
-/////// Стиль для избранных чашек ////////
+//////////// Популярные чашек ////////////
 ///////////////////////////////////////*/
 
 .favorit__mugs {
     display: flex;
     justify-content: center;
-    height: 660px;
     margin: auto 0;
     margin-bottom: 15px;
 }
 
 .box_fav_mugs {
-    width: 460px;
-    height: 540px;
-    padding: 0 10px;
-}
-
-.pink__mug {
     width: 100%;
     height: 100%;
-    background-image: url(../img/PinkMugs.png);
-    background-size: cover;
+    padding: 10px 10px;
 }
 
-.gold__mug {
+.favorit__img {
     width: 100%;
     height: 100%;
-    background-image: url(../img/GoldMugs.png);
     background-size: cover;
+    background-position: center;
 }
 
 .muginfo {
-    display: block;
-    margin-top: 35px;
-    margin-bottom: 5px;
+    margin-bottom: 0;
+    padding-top: 15px;
     text-align: center;
     font-size: 20px;
     line-height: 30px;
@@ -319,13 +313,12 @@ header {
 ///////////////////////////////////////*/
 
 .products__page {
-    display: block;
     margin: auto;
-    width: 960px;
 }
 
 .more__products {
     display: flex;
+    justify-content: center;
 }
 
 .box__card {
@@ -334,8 +327,10 @@ header {
 }
 
 .img__card {
-    width: 300px;
-    height: 380px;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
 }
 
 /*/////////////////////////////////////////
@@ -345,18 +340,20 @@ header {
 .promotion__box {
     display: flex;
     justify-content: center;
-    padding-bottom: 130px;
+    padding-bottom: 10%;
 }
 
 .promotion_img_box {
     display: flex;
-    margin-right: 40px;
+    padding: 10px 0;
 }
 
 .img_conf_max {
     width: 280px;
-    height: 280px;
+    height: 100%;
     padding: 0 10px 0 0;
+    background-position: center;
+    background-size: cover;
 }
 
 .img_box_little {
@@ -370,7 +367,8 @@ header {
 }
 
 .promotion__text {
-    margin: 5px 0 auto 40px;
+    padding: 10px 0;
+
 }
 
 .premium__offer {
@@ -424,7 +422,7 @@ header {
 ///////////////////////////////////////*/
 
 .stories__page {
-    margin-bottom: 200px;
+    margin-bottom: 50px;
 }
 
 .contact_content_block {
@@ -433,8 +431,8 @@ header {
 }
 
 .stories__box {
-    width: 300px;
     margin: 0 10px;
+    padding: 20px 0;
 }
 
 .stories_img_block {
@@ -442,8 +440,10 @@ header {
 }
 
 .img__300 {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
 }
 
 .stories__headline {
@@ -520,7 +520,7 @@ header {
     border: 1px solid #2F303E;
     display: inline-block;
     margin: auto 0;
-    padding: 18px 74px;
+    padding: 2% 5%;
     margin-right: 10px;
 }
 
@@ -535,7 +535,7 @@ header {
     background: #FFFFFF;
     display: inline-block;
     margin: auto 0;
-    padding: 18px 25px;
+    padding: 2% 5%;
 }
 
 /*/////////////////////////////////////////
@@ -543,8 +543,7 @@ header {
 ///////////////////////////////////////*/
 
 .footer__page {
-    display: flex;
-    justify-content: center;
+    margin: 0 auto;
     padding: 100px 0 60px;
 }
 
@@ -571,7 +570,7 @@ header {
 }
 
 .footer_nav_block {
-    margin-right: 80px;
+    margin-right: 5%;
 }
 
 .footer__headline {
